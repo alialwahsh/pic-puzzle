@@ -15,5 +15,3 @@ PicPuzzle is a simple image sliding puzzle game built using HTML, CSS, and JavaS
 1. Download or clone the project  
 2. Open `index.html` in any web browser  
 3. Upload an image and start playing  
-
-## Project Structure
