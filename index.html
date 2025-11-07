@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PicPuzzle — Image to Sliding Puzzle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>PicPuzzle</h1>
+    <p class="sub">Turn any image into a sliding puzzle — no downloads, no login.</p>
+  </header>
+
+  <main class="wrap card">
+    <section class="controls">
+      <label class="btn">
+        <input id="fileInput" type="file" accept="image/*" hidden />
+        Upload Image
+      </label>
+
+      <label class="group">
+        <span>Difficulty</span>
+        <select id="gridSize">
+          <option value="3">3 × 3 (Easy)</option>
+          <option value="4" selected>4 × 4 (Normal)</option>
+          <option value="5">5 × 5 (Hard)</option>
+        </select>
+      </label>
+
+      <button id="shuffleBtn" class="btn primary">Shuffle</button>
+      <button id="restartBtn" class="btn ghost">Restart</button>
+      <button id="previewBtn" class="btn ghost">Preview</button>
+
+      <div class="stats">
+        <span>Moves: <strong id="moves">0</strong></span>
+        <span>Time: <strong id="time">00:00</strong></span>
+      </div>
+    </section>
+
+    <section class="board-area">
+      <canvas id="board" width="480" height="480" aria-label="Puzzle board"></canvas>
+      <img id="preview" alt="preview" />
+    </section>
+  </main>
+
+  <footer class="wrap foot">Canvas • Works offline • No dependencies</footer>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <h3>Puzzle solved! 🎉</h3>
+      <p id="resultText"></p>
+      <div class="modal-actions">
+        <button id="closeModal" class="btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
